@@ -33,6 +33,7 @@ func (c *callStat) addResult(d time.Duration) {
 
 func main() {
 	flag.Parse()
+	fmt.Printf("Running stress test on %s for %v with %d test per iteration\n", *host, time.Duration(*period)*time.Second, *testCount)
 
 	if *host == "" {
 		fmt.Println("host is not defined")
